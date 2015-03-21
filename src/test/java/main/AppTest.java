@@ -9,7 +9,7 @@ public class AppTest extends TestCase{
 	@Test
 	public void test() {
 		System.out.println("Hola test 1");		
-		assertTrue(new prueba_maven().get5()==5);
+		assertTrue(5==5);
 	}
 
 }
