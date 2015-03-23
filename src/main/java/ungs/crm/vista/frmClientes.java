@@ -59,7 +59,7 @@ public class frmClientes extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblRaznSocial = new JLabel("Razón social:");
+		JLabel lblRaznSocial = new JLabel("RazÃ³n social:");
 		lblRaznSocial.setBounds(22, 70, 72, 14);
 		contentPane.add(lblRaznSocial);
 		

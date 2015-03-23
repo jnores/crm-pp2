@@ -77,7 +77,7 @@ public class frmVerContactos extends JFrame {
 				{"GOOGLE SRL", "IT", "21/03/2015 20:53PM"},
 			},
 			new String[] {
-				"Razón Social", "Rubro", "Fecha y hora de alta"
+				"RazÃ³n Social", "Rubro", "Fecha y hora de alta"
 			}
 		));
 		scrollPane.setViewportView(table);
