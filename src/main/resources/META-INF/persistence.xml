@@ -5,10 +5,6 @@
     <persistence-unit name="persistenceUnit"
         transaction-type="RESOURCE_LOCAL">
  
-        <!-- 
-        <class>ungs.crm.controlador.Employee</class>
-        <class>ungs.crm.controlador.Department</class>
-         -->
          <class>ungs.crm.modelo.Cliente</class>
         <properties>
  
@@ -21,7 +17,7 @@
             Esta no crea el esquema de forma automatica, la de abajo si  
             <property name="hbm2ddl.auto" value="create" />
             -->
-            <property name="hibernate.hbm2ddl.auto" value="create" />            
+            <property name="hibernate.hbm2ddl.auto" value="update" />            
  
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
         </properties>

@@ -39,10 +39,12 @@ public class frmPrincipal extends JFrame {
 	public frmPrincipal() {
 		try{
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		}
+		}		
 		catch (Exception e){}
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
+		
+		setLocationRelativeTo(null);
 		
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
@@ -51,10 +53,26 @@ public class frmPrincipal extends JFrame {
 		menuBar.add(mnMain);
 		
 		JMenuItem mntmClientes = new JMenuItem("Clientes");
+		mntmClientes.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent arg0) {
+				JFrame cli = new frmClientes();
+				cli.show();
+			}
+		});
 		
 		mnMain.add(mntmClientes);
 		
 		JMenuItem mntmVerContactos = new JMenuItem("Ver contactos");
+		
+		mntmVerContactos.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent arg0) {
+				JFrame cont = new frmVerContactos();
+				cont.show();
+			}
+		});
+		
 		mnMain.add(mntmVerContactos);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
