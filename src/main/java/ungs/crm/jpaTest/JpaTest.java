@@ -7,8 +7,10 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
  
+
 import ungs.crm.controlador.Employee;
 import ungs.crm.controlador.Department;
+import ungs.crm.modelo.Cliente;
  
 public class JpaTest {
  
@@ -30,7 +32,8 @@ public class JpaTest {
             EntityTransaction tx = manager.getTransaction();
             tx.begin();
             try {
-                test.createEmployees();
+                //test.createEmployees();
+            	test.crearEmpleados();
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -45,6 +48,11 @@ public class JpaTest {
     		String error = e.getMessage();
     	}
         
+    }
+    
+    private void crearEmpleados()
+    {
+    	manager.persist(new Cliente("PEPITA S.A"));
     }
  
     private void createEmployees() {
