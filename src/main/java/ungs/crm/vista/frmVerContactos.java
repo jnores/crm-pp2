@@ -45,7 +45,7 @@ public class frmVerContactos extends JFrame {
 		catch (Exception e){}
 		
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 450, 300);		
+		setBounds(100, 100, 578, 227);		
 		setLocationRelativeTo(null);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -53,35 +53,35 @@ public class frmVerContactos extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblBsqueda = new JLabel("B\u00FAsqueda:");
-		lblBsqueda.setBounds(10, 28, 59, 14);
+		lblBsqueda.setBounds(10, 14, 59, 14);
 		contentPane.add(lblBsqueda);
 		
 		txtBusqueda = new JTextField();
-		txtBusqueda.setBounds(73, 25, 351, 20);
+		txtBusqueda.setBounds(73, 11, 479, 20);
 		contentPane.add(txtBusqueda);
 		txtBusqueda.setColumns(10);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(20, 58, 404, 193);
+		scrollPane.setBounds(10, 58, 542, 131);
 		contentPane.add(scrollPane);
 		
 		table = new JTable();
 		table.setModel(new DefaultTableModel(
 			new Object[][] {
-				{"GOOGLE SRL", "IT", "21/03/2015 20:53PM"},
-				{"GOOGLE SRL", "IT", "21/03/2015 20:53PM"},
-				{"GOOGLE SRL", "IT", "21/03/2015 20:53PM"},
-				{"GOOGLE SRL", "IT", "21/03/2015 20:53PM"},
-				{"GOOGLE SRL", "IT", "21/03/2015 20:53PM"},
-				{"GOOGLE SRL", "IT", "21/03/2015 20:53PM"},
-				{"GOOGLE SRL", "IT", "21/03/2015 20:53PM"},
-				{"GOOGLE SRL", "IT", "21/03/2015 20:53PM"},
+				{"Telefónico", "Solicitó presupuesto sobre pack arduino","20/03/2015 15:30"},
+				{"Telefónico", "Manifestó queja por tardanza de envío","21/03/2015 16:30"},
+				{"Correo electrónico", "Se envió notificación x","22/03/2015 17:30"},
+				{"Correo electrónico", "Otra descripción","23/03/2015 18:30"},				
 			},
 			new String[] {
-				"Razón Social", "Rubro", "Fecha y hora de alta"
+				"Tipo de Contacto", "Descripción", "Fecha-hora"
 			}
 		));
 		scrollPane.setViewportView(table);
+		
+		JLabel lblGoogleArgentinaSrl = new JLabel("GOOGLE ARGENTINA S.R.L");
+		lblGoogleArgentinaSrl.setBounds(10, 39, 414, 14);
+		contentPane.add(lblGoogleArgentinaSrl);
 
 	}
 }
