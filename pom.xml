@@ -7,7 +7,7 @@
   <groupId>1</groupId>
   <artifactId>crm-pp2</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>MavenProof</name>
+  <name>UNGS-CRM</name>
   <url>http://maven.apache.org</url>
   
   <properties>
