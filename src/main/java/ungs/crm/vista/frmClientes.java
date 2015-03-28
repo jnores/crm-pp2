@@ -16,7 +16,8 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.UIManager;
 
-import ungs.crm.modelo.Cliente;
+import ungs.crm.entidades.Cliente;
+import ungs.crm.modelo.ClienteModelo;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -81,7 +82,7 @@ public class frmClientes extends JFrame {
 	
 	private void guardar()
 	{
-		//Cochinada para el profesor
+		//Cochinada 
 		try
 		{
 			EntityManagerFactory factory = Persistence.createEntityManagerFactory("persistenceUnit");
@@ -97,6 +98,6 @@ public class frmClientes extends JFrame {
 		{
 			JOptionPane.showMessageDialog(null,e.getMessage());
 		}
-		//Cochinada para el profesor
+		//Cochinada 
 	}
 }

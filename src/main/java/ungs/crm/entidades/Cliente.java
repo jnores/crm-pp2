@@ -1,11 +1,11 @@
-package ungs.crm.modelo;
+package ungs.crm.entidades;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class Cliente {
-
 	@Id
 	@GeneratedValue
 	private long id;
@@ -27,8 +27,6 @@ public class Cliente {
 	public void setRazon_social(String razon_social) {
 		this.razon_social = razon_social;	
 	}
-
-	public Cliente(){}
 	
 	public Cliente(String razon_social)
 	{

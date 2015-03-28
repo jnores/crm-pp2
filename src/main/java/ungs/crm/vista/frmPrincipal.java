@@ -73,7 +73,31 @@ public class frmPrincipal extends JFrame {
 			}
 		});
 		
+		JMenuItem mntmMensajes = new JMenuItem("Mensajes");
+		
+		mntmMensajes.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent arg0) {
+				JFrame msjs = new frmMensajes();
+				msjs.show();
+			}
+		});
+		
+		mnMain.add(mntmMensajes);
+		
 		mnMain.add(mntmVerContactos);
+		
+		JMenuItem mntmVerEstados = new JMenuItem("Ver estados");
+		
+		mntmVerEstados.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent arg0) {
+				JFrame estados = new frmVerEstados();
+				estados.show();
+			}
+		});
+		
+		mnMain.add(mntmVerEstados);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
