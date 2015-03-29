@@ -90,7 +90,8 @@ public class frmClientes extends JFrame {
             EntityTransaction tx = manager.getTransaction();
             //Esto lo necesita si o si, aunque no entiendo por que, esto no se necesita grabar con transacciones
             tx.begin();            
-			manager.persist(new Cliente(txtRazonSocial.getText()));
+            
+			//manager.persist(new Cliente(txtRazonSocial.getText()));
 			tx.commit();
 			JOptionPane.showMessageDialog(null,"Cliente grabado");
 		}

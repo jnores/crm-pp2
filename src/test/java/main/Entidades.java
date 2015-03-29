@@ -22,9 +22,11 @@ public class Entidades extends TestCase {
 		c.setDescripcion("prueba");
 		c.setFecha_Hora("01/01/2015");
 		c.setTipoContacto("Telefono");
+		c.setIdCliente(1);
 		assertTrue(c.getDescripcion().equals("prueba") && 
 				   c.getFecha_Hora().equals("01/01/2015") && 
-				   c.getTipoContacto().equals("Telefono"));
+				   c.getTipoContacto().equals("Telefono") &&
+				   c.getIdCliente() == 1);
 	}
 
 }
