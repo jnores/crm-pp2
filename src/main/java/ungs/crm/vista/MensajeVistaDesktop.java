@@ -10,7 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 
-public class frmMensajes extends JFrame {
+public class MensajeVistaDesktop extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -23,7 +23,7 @@ public class frmMensajes extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					frmMensajes frame = new frmMensajes();
+					MensajeVistaDesktop frame = new MensajeVistaDesktop();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -35,7 +35,7 @@ public class frmMensajes extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public frmMensajes() {
+	public MensajeVistaDesktop() {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();

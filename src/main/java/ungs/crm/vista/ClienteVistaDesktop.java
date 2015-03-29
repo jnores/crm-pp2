@@ -3,6 +3,10 @@ package ungs.crm.vista;
 import java.awt.EventQueue;
 import java.awt.event.ActionListener;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -83,5 +87,27 @@ public class ClienteVistaDesktop extends JFrame {
         JOptionPane.showMessageDialog(this, error);
 
     }
+	
+//	private void guardar()
+//	{
+//		//Cochinada 
+//		try
+//		{
+//			EntityManagerFactory factory = Persistence.createEntityManagerFactory("persistenceUnit");
+//            EntityManager manager = factory.createEntityManager();           
+//            EntityTransaction tx = manager.getTransaction();
+//            //Esto lo necesita si o si, aunque no entiendo por que, esto no se necesita grabar con transacciones
+//            tx.begin();            
+//            
+//			//manager.persist(new Cliente(txtRazonSocial.getText()));
+//			tx.commit();
+//			JOptionPane.showMessageDialog(null,"Cliente grabado");
+//		}
+//		catch(Exception e)
+//		{
+//			JOptionPane.showMessageDialog(null,e.getMessage());
+//		}
+//		//Cochinada 
+//	}
 
 }

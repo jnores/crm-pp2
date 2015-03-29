@@ -1,16 +1,14 @@
-package main;
+package ungs.crm.modelo;
 
 import java.util.List;
 
-import org.junit.Test;
-
-import ungs.crm.entidades.Cliente;
-import ungs.crm.entidades.Contacto;
-import ungs.crm.modelo.ClienteModelo;
-import ungs.crm.modelo.ContactoModelo;
 import junit.framework.TestCase;
 
-public class Modelo extends TestCase {
+import org.junit.Test;
+
+import ungs.crm.entidades.Contacto;
+
+public class ContactoModeloTest extends TestCase{
 	
 	@Test
 	public void testObtenerContactos()
@@ -24,9 +22,9 @@ public class Modelo extends TestCase {
 	}
 	
 	@Test
-	public void testGuardar()
+	public void testObtenerContCliInexistente()
 	{
-		new ClienteModelo().guardar(new Cliente(""));
+		assertTrue(new ContactoModelo().obtenerContactos(2).size()==0);
 	}
 
 }
