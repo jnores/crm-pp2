@@ -10,6 +10,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.border.EmptyBorder;
 
 public class ClienteVistaDesktop extends JFrame {
@@ -36,13 +37,12 @@ public class ClienteVistaDesktop extends JFrame {
 
 	/**
 	 * Create the frame.
+	 * @throws UnsupportedLookAndFeelException 
+	 * @throws IllegalAccessException 
+	 * @throws InstantiationException 
+	 * @throws ClassNotFoundException 
 	 */
-	public ClienteVistaDesktop() {
-		try{
-			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		}
-		catch (Exception e){}
-		
+	public ClienteVistaDesktop()  {
 		
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 160);
