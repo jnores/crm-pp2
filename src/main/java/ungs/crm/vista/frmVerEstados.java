@@ -2,23 +2,18 @@ package ungs.crm.vista;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
-import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
 
-import ungs.crm.entidades.Estado;
-import javax.swing.JButton;
-
-public class EstadoVistaDesktop extends JFrame {
+public class frmVerEstados extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField, txtRojo;
-	private JButton btnBuscar;
+	private JTextField textField;
+	private JTextField txtRojo;
 
 	/**
 	 * Launch the application.
@@ -27,7 +22,7 @@ public class EstadoVistaDesktop extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					EstadoVistaDesktop frame = new EstadoVistaDesktop();
+					frmVerEstados frame = new frmVerEstados();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -39,8 +34,7 @@ public class EstadoVistaDesktop extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public EstadoVistaDesktop() {
-		
+	public frmVerEstados() {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 137);
 		setLocationRelativeTo(null);
@@ -55,8 +49,7 @@ public class EstadoVistaDesktop extends JFrame {
 		
 		textField = new JTextField();
 		textField.setColumns(10);
-		textField.setEditable(false);
-		textField.setBounds(73, 11, 265, 20);
+		textField.setBounds(73, 11, 351, 20);
 		contentPane.add(textField);
 		
 		JLabel label_1 = new JLabel("GOOGLE ARGENTINA S.R.L");
@@ -68,22 +61,9 @@ public class EstadoVistaDesktop extends JFrame {
 		contentPane.add(lblEstado);
 		
 		txtRojo = new JTextField();
-		txtRojo.setText("");
-		txtRojo.setEditable(false);
+		txtRojo.setText("ROJO");
 		txtRojo.setBounds(73, 64, 77, 20);
 		contentPane.add(txtRojo);
 		txtRojo.setColumns(10);
-		
-		btnBuscar = new JButton("Ver");
-		btnBuscar.setBounds(345, 10, 89, 23);
-		contentPane.add(btnBuscar);
-	}
-
-	public void setEstado(Estado estadoByCli) {		
-		txtRojo.setText(estadoByCli.getDescripcion());
-	}
-
-	public void evtBusquedaEstado(ActionListener estadosListener) {
-		btnBuscar.addActionListener(estadosListener);
 	}
 }

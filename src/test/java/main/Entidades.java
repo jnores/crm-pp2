@@ -1,10 +1,20 @@
-package ungs.crm.entidades;
-
-import junit.framework.TestCase;
+package main;
 
 import org.junit.Test;
 
-public class ContactoEntidadesTest extends TestCase{
+import ungs.crm.entidades.*;
+import junit.framework.TestCase;
+
+public class Entidades extends TestCase {
+	@Test
+	public void testCliente()
+	{
+		Cliente c = new Cliente("prueba");
+		c.setId(1);
+		c.setRazon_social("prueba");
+		assertTrue(c.getId()==1 && c.getRazon_social().equals("prueba"));
+	}
+	
 	@Test
 	public void testContacto()
 	{

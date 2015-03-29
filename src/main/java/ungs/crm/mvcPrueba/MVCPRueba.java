@@ -1,9 +1,11 @@
 package ungs.crm.mvcPrueba;
 
-import ungs.crm.controlador.*;
-import ungs.crm.modelo.*;
-import ungs.crm.vista.*;
-
+import ungs.crm.controlador.ClienteControlador;
+import ungs.crm.controlador.ContactoControlador;
+import ungs.crm.modelo.ClienteModelo;
+import ungs.crm.modelo.ContactoModelo;
+import ungs.crm.vista.ClienteVistaDesktop;
+import ungs.crm.vista.ContactoVistaDesktop;
 
 public class MVCPRueba {
 
@@ -18,23 +20,13 @@ public class MVCPRueba {
 //
 //        vistaCli.setVisible(true);
 		
-//		ContactoVistaDesktop vistaCli= new ContactoVistaDesktop();
-//		
-//		ContactoModelo modeloCli= new ContactoModelo();
-//
-//        ContactoControlador controlCli = new ContactoControlador(vistaCli, modeloCli);
-//
-//        vistaCli.setVisible(true);
+		ContactoVistaDesktop vistaCli= new ContactoVistaDesktop();
 		
-		EstadoVistaDesktop vistaCli= new EstadoVistaDesktop();
-		
-		EstadoModelo modeloCli= new EstadoModelo();
+		ContactoModelo modeloCli= new ContactoModelo();
 
-        EstadoControlador controlCli = new EstadoControlador(vistaCli, modeloCli);
+        ContactoControlador controlCli = new ContactoControlador(vistaCli, modeloCli);
 
         vistaCli.setVisible(true);
-		
-		
 	}
 
 }

@@ -10,15 +10,6 @@ public class Cliente {
 	@GeneratedValue
 	private long id;
 	
-	private long idEstado;
-	public long getIdEstado() {
-		return idEstado;
-	}
-
-	public void setIdEstado(long idEstado) {
-		this.idEstado = idEstado;
-	}
-
 	public long getId() {
 		return id;
 	}
@@ -37,4 +28,8 @@ public class Cliente {
 		this.razon_social = razon_social;	
 	}
 	
+	public Cliente(String razon_social)
+	{
+		this.razon_social = razon_social;
+	}
 }

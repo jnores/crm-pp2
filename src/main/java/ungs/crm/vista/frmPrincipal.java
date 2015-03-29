@@ -53,32 +53,32 @@ public class frmPrincipal extends JFrame {
 		menuBar.add(mnMain);
 		
 		JMenuItem mntmClientes = new JMenuItem("Clientes");
-//		mntmClientes.addMouseListener(new MouseAdapter() {
-//			@Override
-//			public void mousePressed(MouseEvent arg0) {
-//				JFrame cli = new frmClientes();
-//				cli.show();
-//			}
-//		});
+		mntmClientes.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent arg0) {
+				JFrame cli = new frmClientes();
+				cli.show();
+			}
+		});
 		
 		mnMain.add(mntmClientes);
 		
 		JMenuItem mntmVerContactos = new JMenuItem("Ver contactos");
 		
-//		mntmVerContactos.addMouseListener(new MouseAdapter() {
-//			@Override
-//			public void mousePressed(MouseEvent arg0) {
-//				JFrame cont = new frmVerContactos();
-//				cont.show();
-//			}
-//		});
+		mntmVerContactos.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent arg0) {
+				JFrame cont = new frmVerContactos();
+				cont.show();
+			}
+		});
 		
 		JMenuItem mntmMensajes = new JMenuItem("Mensajes");
 		
 		mntmMensajes.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent arg0) {
-				JFrame msjs = new MensajeVistaDesktop();
+				JFrame msjs = new frmMensajes();
 				msjs.show();
 			}
 		});
@@ -89,14 +89,13 @@ public class frmPrincipal extends JFrame {
 		
 		JMenuItem mntmVerEstados = new JMenuItem("Ver estados");
 		
-//		mntmVerEstados.addMouseListener(new MouseAdapter() {
-//			@Override
-//			public void mousePressed(MouseEvent arg0) {
-//				JFrame estados = new frmVerEstados();
-//				estados.show();
-//			}
-		//});
-		
+		mntmVerEstados.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent arg0) {
+				JFrame estados = new frmVerEstados();
+				estados.show();
+			}
+		});
 		
 		mnMain.add(mntmVerEstados);
 		contentPane = new JPanel();
