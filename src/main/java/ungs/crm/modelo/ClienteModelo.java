@@ -17,7 +17,7 @@ public class ClienteModelo {
             EntityTransaction tx = manager.getTransaction();
             //Esto lo necesita si o si, aunque no entiendo por que, esto no se necesita grabar con transacciones
             tx.begin();            
-			manager.persist(cliente);
+				manager.persist(cliente);
 			tx.commit();
 			JOptionPane.showMessageDialog(null,"Cliente grabado");
 	}		

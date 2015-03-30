@@ -80,7 +80,7 @@ public class EstadoVistaDesktop extends JFrame {
 	}
 
 	public void setEstado(Estado estadoByCli) {		
-		txtRojo.setText(estadoByCli.getDescripcion());
+		txtRojo.setText(estadoByCli.getNombre());
 	}
 
 	public void evtBusquedaEstado(ActionListener estadosListener) {
