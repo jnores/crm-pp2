@@ -68,10 +68,10 @@
         <artifactId>jacoco-maven-plugin</artifactId>
         <version>${jacoco.version}</version>
         <executions>
-          <execution>
-            <id>default-prepare-agent</id>
-            <goals><goal>prepare-agent</goal></goals>
-          </execution>
+<!--           <execution> -->
+<!--             <id>default-prepare-agent</id> -->
+<!--             <goals><goal>prepare-agent</goal></goals> -->
+<!--           </execution> -->
           <execution>
             <id>default-report</id>
             <phase>prepare-package</phase>
