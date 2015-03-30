@@ -10,13 +10,13 @@ public class MVCPRueba {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		 
-//		ClienteVistaDesktop vistaCli= new ClienteVistaDesktop();
-//		
-//		ClienteModelo modeloCli= new ClienteModelo();
-//
-//        ClienteControlador controlCli = new ClienteControlador(vistaCli, modeloCli);
-//
-//        vistaCli.setVisible(true);
+		ClienteVistaDesktop vistaCli= new ClienteVistaDesktop();
+		
+		ClienteModelo modeloCli= new ClienteModelo();
+
+        ClienteControlador controlCli = new ClienteControlador(vistaCli, modeloCli);
+
+        vistaCli.setVisible(true);
 		
 //		ContactoVistaDesktop vistaCli= new ContactoVistaDesktop();
 //		
@@ -26,13 +26,13 @@ public class MVCPRueba {
 //
 //        vistaCli.setVisible(true);
 		
-		EstadoVistaDesktop vistaCli= new EstadoVistaDesktop();
-		
-		EstadoModelo modeloCli= new EstadoModelo();
-
-        EstadoControlador controlCli = new EstadoControlador(vistaCli, modeloCli);
-
-        vistaCli.setVisible(true);
+//		EstadoVistaDesktop vistaCli= new EstadoVistaDesktop();
+//		
+//		EstadoModelo modeloCli= new EstadoModelo();
+//
+//        EstadoControlador controlCli = new EstadoControlador(vistaCli, modeloCli);
+//
+//        vistaCli.setVisible(true);
 		
 		
 	}

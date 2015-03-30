@@ -9,9 +9,9 @@ public class EstadoEntidadesTest extends TestCase{
 	public void testEstado()
 	{
 		Estado e = new Estado();
-		e.setId(1);
-		e.setDescripcion("Rojo");
-		assertTrue(e.getId()==1 && e.getDescripcion().equals("Rojo"));
+		e.setNombre("Rojo");
+		e.setDescripcion("malo");
+		assertTrue(e.getNombre().equalsIgnoreCase("Rojo") && e.getDescripcion().equals("malo"));
 	}
 
 }

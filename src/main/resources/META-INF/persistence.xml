@@ -6,6 +6,7 @@
         transaction-type="RESOURCE_LOCAL">
  
          <class>ungs.crm.entidades.Cliente</class>
+         <class>ungs.crm.entidades.Estado</class>
          
         <properties>
  

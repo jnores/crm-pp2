@@ -6,8 +6,8 @@ public class EstadoModelo {
 	public Estado getEstadoByCli(long idCliente)
 	{
 		Estado ret = new Estado();
-		ret.setId(1);
-		ret.setDescripcion("ROJO");		
+		ret.setNombre("Rojo");
+		ret.setDescripcion("malo");		
 		return ret;
 	}	
 }

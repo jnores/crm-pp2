@@ -9,8 +9,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>UNGS-CRM</name>
   <url>http://maven.apache.org</url>
-  <packaging>war</packaging>
-  
+ 
   <properties>
   	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -19,15 +18,7 @@
     <surefire.version>2.17</surefire.version>
     <jacoco.version>0.7.4.201502262128</jacoco.version>
   </properties>
-  
-  <repositories>
-    <repository>
-	  <id>java.net2</id>
-	  <name>Repository hosting the jee6 artifacts</name>
-	  <url>http://download.java.net/maven/2</url>
-	</repository>
-  </repositories>     
-  
+ 
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -49,13 +40,6 @@
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-entitymanager</artifactId>
       <version>4.0.1.Final</version>
-    </dependency>
-    
-    <dependency>
-      <groupId>javax</groupId>
-      <artifactId>javaee-web-api</artifactId>
-      <version>6.0</version>
-      <scope>provided</scope>
     </dependency>
     
   </dependencies>
@@ -95,17 +79,6 @@
           </execution>
         </executions>
       </plugin>
-      
-      <plugin>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>2.4</version>
-        <configuration>
-          <warSourceDirectory>/src/main/webapp</warSourceDirectory>
-          <failOnMissingWebXml>false</failOnMissingWebXml>
-        </configuration>
-      </plugin>
-      
-      
       
     </plugins>
   </build>

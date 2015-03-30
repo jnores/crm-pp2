@@ -32,8 +32,7 @@ public class ClienteControlador {
 			{
 				String nombreCliente = cliVista.getRazonSocial();
 				Cliente cli = new Cliente();
-				cli.setId(1);
-				cli.setRazon_social(nombreCliente);
+				cli.setRazonSocial(nombreCliente);
 				cliModelo.guardar(cli);
 			}
 			catch(Exception e)
