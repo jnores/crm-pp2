@@ -4,7 +4,15 @@ public class Contacto {
 	private String tipoContacto,
 				   descripcion,
 				   fecha_Hora;
-	private int idCliente;
+	private int idCliente, idContacto;
+
+	public int getIdContacto() {
+		return idContacto;
+	}
+
+	public void setIdContacto(int idContacto) {
+		this.idContacto = idContacto;
+	}
 
 	public int getIdCliente() {
 		return idCliente;

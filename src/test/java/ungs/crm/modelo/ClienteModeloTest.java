@@ -15,5 +15,4 @@ public class ClienteModeloTest extends TestCase{
 		new ClienteModelo().guardar(new Cliente());
 	}
 	
-
 }

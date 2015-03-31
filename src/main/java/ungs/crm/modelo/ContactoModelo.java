@@ -48,4 +48,13 @@ public class ContactoModelo {
 		return ret;
 		
 	}
+	
+	public Contacto obtenerContacto(int idCliente,
+									int idContacto)
+	{
+		Contacto ret = new Contacto();
+		if (idContacto == 2 && idCliente == 1)
+			ret = null;
+		return ret;
+	}
 }

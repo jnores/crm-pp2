@@ -20,5 +20,11 @@ public class ClienteModelo {
 				manager.persist(cliente);
 			tx.commit();
 			JOptionPane.showMessageDialog(null,"Cliente grabado");
+	}
+
+	public Object obtenerCliente(int i) {
+		// TODO Auto-generated method stub
+		Cliente c = null;
+		return c;
 	}		
 }

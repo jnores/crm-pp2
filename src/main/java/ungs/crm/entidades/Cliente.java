@@ -5,6 +5,7 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -15,7 +16,7 @@ import javax.persistence.Table;
 @Table(name = "cliente")
 public class Cliente {
 	@Id
-	@GeneratedValue
+	@GeneratedValue	
 	@Column(name="id_cliente")
 	private long id;
 	
