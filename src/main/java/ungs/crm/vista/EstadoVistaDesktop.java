@@ -11,11 +11,14 @@ import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 
+import ungs.crm.controlador.EstadoControlador;
 import ungs.crm.entidades.Estado;
+
 import javax.swing.JButton;
 
 public class EstadoVistaDesktop extends JFrame {
 
+	private EstadoControlador controlador;
 	private JPanel contentPane;
 	private JTextField textField, txtRojo;
 	private JButton btnBuscar;
@@ -81,6 +84,10 @@ public class EstadoVistaDesktop extends JFrame {
 
 	public void setEstado(Estado estadoByCli) {		
 		txtRojo.setText(estadoByCli.getNombre());
+	}
+	
+	public void setControlador(EstadoControlador controlador){
+		this.controlador=controlador;
 	}
 
 	public void evtBusquedaEstado(ActionListener estadosListener) {

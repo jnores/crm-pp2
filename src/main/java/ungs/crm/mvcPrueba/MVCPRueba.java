@@ -27,7 +27,7 @@ public class MVCPRueba {
 	}
 	
 	private static void cargarClientes(){
-		ClienteModelo cm = new ClienteModelo();
+		ClienteModelo cm = ClienteModelo.getInstance();
 		
 			Cliente google = new Cliente();
 			google.setEstado(new EstadoModelo().getEstadoById(3));
@@ -53,7 +53,7 @@ public class MVCPRueba {
 		 
 		ClienteVistaDesktop vistaCli= new ClienteVistaDesktop();
 		
-		ClienteModelo modeloCli= new ClienteModelo();
+		ClienteModelo modeloCli= ClienteModelo.getInstance();
 
         ClienteControlador controlCli = new ClienteControlador(vistaCli, modeloCli);
 

@@ -15,6 +15,7 @@ public class EstadoControlador {
 	{
 		this.estadoMod = mod;
 		this.estadoVista = vista;
+		vista.setControlador(this);
 		this.estadoVista.evtBusquedaEstado(new estadosListener());
 	}
 	

@@ -16,7 +16,7 @@ import javax.persistence.Table;
 @Table(name = "cliente")
 public class Cliente {
 	@Id
-	@GeneratedValue	
+	@GeneratedValue
 	@Column(name="id_cliente")
 	private long id;
 	
@@ -24,7 +24,7 @@ public class Cliente {
 	@Column(name="razon_social")
 	private String razonSocial;
 	
-	@ManyToOne(fetch=FetchType.LAZY)
+	@ManyToOne(fetch=FetchType.EAGER)
 	private Estado estado;
 
 	public long getId() {
@@ -46,6 +46,10 @@ public class Cliente {
 	}
 	public void setEstado(Estado estado) {
 		this.estado = estado;
+	}
+	@Override
+	public String toString(){
+		return "id:"+id+" |nombre:"+(razonSocial!=null?razonSocial:"NULL")+" |estado("+(estado!=null?estado.toString():"NULL")+")" ;
 	}
 
 }

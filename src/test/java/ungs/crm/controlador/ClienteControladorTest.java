@@ -11,7 +11,7 @@ public class ClienteControladorTest extends TestCase {
 	public void testControladoresCliente()
 	{
 		ClienteControlador cliControlador = new ClienteControlador(new ClienteVistaDesktop(),
-				  new ClienteModelo());
+				  ClienteModelo.getInstance());
 		assertNotNull(cliControlador);
 	}
 

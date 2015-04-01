@@ -15,7 +15,7 @@ public class ContactoModeloTest extends TestCase{
 	//Para el mensaje por pantalla del sistema.
 	public void testObtenerContactos()
 	{		
-		assertNull(new ClienteModelo().obtenerCliente(2));
+		assertNull(ClienteModelo.getInstance().buscarPorId(2));
 	}
 	
 	@Test

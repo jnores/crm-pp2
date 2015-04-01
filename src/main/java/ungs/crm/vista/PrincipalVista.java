@@ -62,7 +62,7 @@ public class PrincipalVista extends JFrame {
 			public void mousePressed(MouseEvent arg0) {
 				ClienteVistaDesktop vistaCli= new ClienteVistaDesktop();
 				
-				ClienteModelo modeloCli= new ClienteModelo();
+				ClienteModelo modeloCli= ClienteModelo.getInstance();
 
 				ClienteControlador controlCli = new ClienteControlador(vistaCli, modeloCli);
 
