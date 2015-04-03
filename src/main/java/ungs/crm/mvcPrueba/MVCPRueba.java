@@ -1,9 +1,9 @@
 package ungs.crm.mvcPrueba;
 
-import ungs.crm.controlador.*;
-import ungs.crm.modelo.*;
-import ungs.crm.vista.*;
-import ungs.crm.entidades.*;
+import ungs.crm.controller.*;
+import ungs.crm.model.*;
+import ungs.crm.view.*;
+import ungs.crm.entity.*;
 
 public class MVCPRueba {
 	
@@ -29,7 +29,7 @@ public class MVCPRueba {
 	private static void cargarClientes(){
 		ClienteModelo cm = ClienteModelo.getInstance();
 		
-			Cliente google = new Cliente();
+			Customer google = new Customer();
 			google.setEstado(new EstadoModelo().getEstadoById(3));
 			google.setRazonSocial("Google Argentina S.R.L");
 		cm.guardar(google);

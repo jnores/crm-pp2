@@ -1,4 +1,4 @@
-package ungs.crm.vista;
+package ungs.crm.view;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;

@@ -1,23 +1,23 @@
-package ungs.crm.modelo;
+package ungs.crm.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import ungs.crm.entidades.Contacto;
+import ungs.crm.entity.Conversation;
 
 public class ContactoModelo {
 
-	public List<Contacto> obtenerContactos(int idcliente)
+	public List<Conversation> obtenerContactos(int idcliente)
 	{
 		//esto es cochino
-		List<Contacto> ret = new ArrayList<>();
+		List<Conversation> ret = new ArrayList<>();
 		
 		if (idcliente==1)
 		{
-			Contacto c = new Contacto();
-			Contacto c1 = new Contacto();
-			Contacto c2 = new Contacto();
-			Contacto c3 = new Contacto();
+			Conversation c = new Conversation();
+			Conversation c1 = new Conversation();
+			Conversation c2 = new Conversation();
+			Conversation c3 = new Conversation();
 			c.setIdCliente(1);
 			c.setTipoContacto("Telefonico");
 			c.setDescripcion("Solicitó presupuesto sobre pack arduino");
@@ -49,10 +49,10 @@ public class ContactoModelo {
 		
 	}
 	
-	public Contacto obtenerContacto(int idCliente,
+	public Conversation obtenerContacto(int idCliente,
 									int idContacto)
 	{
-		Contacto ret = new Contacto();
+		Conversation ret = new Conversation();
 		if (idContacto == 2 && idCliente == 1)
 			ret = null;
 		return ret;

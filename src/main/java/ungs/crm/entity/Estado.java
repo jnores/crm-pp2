@@ -1,4 +1,4 @@
-package ungs.crm.entidades;
+package ungs.crm.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;

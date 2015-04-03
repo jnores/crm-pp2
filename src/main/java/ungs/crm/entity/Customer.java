@@ -1,4 +1,4 @@
-package ungs.crm.entidades;
+package ungs.crm.entity;
 
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
@@ -14,7 +14,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "cliente")
-public class Cliente {
+public class Customer {
 	@Id
 	@GeneratedValue
 	@Column(name="id_cliente")

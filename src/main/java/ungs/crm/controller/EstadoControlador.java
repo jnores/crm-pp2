@@ -1,10 +1,10 @@
-package ungs.crm.controlador;
+package ungs.crm.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import ungs.crm.modelo.EstadoModelo;
-import ungs.crm.vista.EstadoVistaDesktop;
+import ungs.crm.model.EstadoModelo;
+import ungs.crm.view.EstadoVistaDesktop;
 
 public class EstadoControlador {
 	private EstadoModelo estadoMod;

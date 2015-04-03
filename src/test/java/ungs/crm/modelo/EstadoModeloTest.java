@@ -4,6 +4,8 @@ import junit.framework.TestCase;
 
 import org.junit.Test;
 
+import ungs.crm.model.EstadoModelo;
+
 public class EstadoModeloTest extends TestCase {
 	@Test
 	public void testEstado()

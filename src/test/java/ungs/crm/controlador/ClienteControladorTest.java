@@ -2,8 +2,9 @@ package ungs.crm.controlador;
 
 import org.junit.Test;
 
-import ungs.crm.modelo.ClienteModelo;
-import ungs.crm.vista.ClienteVistaDesktop;
+import ungs.crm.controller.ClienteControlador;
+import ungs.crm.model.ClienteModelo;
+import ungs.crm.view.ClienteVistaDesktop;
 import junit.framework.TestCase;
 
 public class ClienteControladorTest extends TestCase {

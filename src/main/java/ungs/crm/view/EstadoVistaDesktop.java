@@ -1,4 +1,4 @@
-package ungs.crm.vista;
+package ungs.crm.view;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -11,8 +11,8 @@ import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 
-import ungs.crm.controlador.EstadoControlador;
-import ungs.crm.entidades.Estado;
+import ungs.crm.controller.EstadoControlador;
+import ungs.crm.entity.Estado;
 
 import javax.swing.JButton;
 

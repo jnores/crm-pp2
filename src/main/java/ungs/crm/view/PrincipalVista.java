@@ -1,4 +1,4 @@
-package ungs.crm.vista;
+package ungs.crm.view;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -11,8 +11,8 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.UIManager;
 
-import ungs.crm.controlador.*;
-import ungs.crm.modelo.*;
+import ungs.crm.controller.*;
+import ungs.crm.model.*;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;

@@ -1,9 +1,10 @@
-package ungs.crm.controlador;
+package ungs.crm.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import ungs.crm.modelo.ContactoModelo;
-import ungs.crm.vista.ContactoVistaDesktop;
+
+import ungs.crm.model.ContactoModelo;
+import ungs.crm.view.ContactoVistaDesktop;
 
 public class ContactoControlador {
 	private ContactoModelo contModelo;

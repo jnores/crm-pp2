@@ -1,4 +1,4 @@
-package ungs.crm.vista;
+package ungs.crm.view;
 
 import java.awt.EventQueue;
 import java.awt.event.ActionListener;

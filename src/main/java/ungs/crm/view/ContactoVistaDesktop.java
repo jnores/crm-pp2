@@ -1,4 +1,4 @@
-package ungs.crm.vista;
+package ungs.crm.view;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -15,7 +15,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JButton;
 
-import ungs.crm.entidades.Contacto;
+import ungs.crm.entity.Conversation;
 
 import java.awt.event.ActionEvent;
 import java.util.List;
@@ -93,12 +93,12 @@ public class ContactoVistaDesktop extends JFrame {
 		btnVer.addActionListener(verDatosListener);
 	}
 	
-	public void setearGrilla(List<Contacto> listaContactos)
+	public void setearGrilla(List<Conversation> listaContactos)
 	{
 		Object[] datos = new Object[NUMEROS_COLUMNA];
 		DefaultTableModel modeloTabla = (DefaultTableModel) table.getModel();
 		
-		for(Contacto c : listaContactos)
+		for(Conversation c : listaContactos)
 		{
 			datos[0] = c.getTipoContacto();
 			datos[1] = c.getDescripcion();

@@ -1,11 +1,11 @@
-package ungs.crm.controlador;
+package ungs.crm.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import ungs.crm.entidades.Cliente;
-import ungs.crm.modelo.ClienteModelo;
-import ungs.crm.vista.ClienteVistaDesktop;
+import ungs.crm.entity.Customer;
+import ungs.crm.model.ClienteModelo;
+import ungs.crm.view.ClienteVistaDesktop;
 
 //Maneja la forma en que el modelo y la vista interactuan
 public class ClienteControlador {
@@ -31,7 +31,7 @@ public class ClienteControlador {
 			try
 			{
 				String nombreCliente = cliVista.getRazonSocial();
-				Cliente cli = new Cliente();
+				Customer cli = new Customer();
 				cli.setRazonSocial(nombreCliente);
 				cliModelo.guardar(cli);
 			}

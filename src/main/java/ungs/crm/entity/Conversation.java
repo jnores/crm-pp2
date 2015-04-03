@@ -1,6 +1,6 @@
-package ungs.crm.entidades;
+package ungs.crm.entity;
 
-public class Contacto {
+public class Conversation {
 	private String tipoContacto,
 				   descripcion,
 				   fecha_Hora;

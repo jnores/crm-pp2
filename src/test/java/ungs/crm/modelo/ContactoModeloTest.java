@@ -6,7 +6,9 @@ import junit.framework.TestCase;
 
 import org.junit.Test;
 
-import ungs.crm.entidades.Contacto;
+import ungs.crm.entity.Conversation;
+import ungs.crm.model.ClienteModelo;
+import ungs.crm.model.ContactoModelo;
 
 public class ContactoModeloTest extends TestCase{
 	

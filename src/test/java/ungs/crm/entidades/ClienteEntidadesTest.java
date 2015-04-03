@@ -4,11 +4,14 @@ import junit.framework.TestCase;
 
 import org.junit.Test;
 
+import ungs.crm.entity.Customer;
+import ungs.crm.entity.Estado;
+
 public class ClienteEntidadesTest extends TestCase {
 	@Test
 	public void testCliente()
 	{
-		Cliente c = new Cliente();
+		Customer c = new Customer();
 		c.setId(1);
 		c.setRazonSocial("prueba");
 		c.setEstado(new Estado());

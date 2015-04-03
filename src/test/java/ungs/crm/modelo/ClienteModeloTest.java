@@ -6,7 +6,8 @@ import junit.framework.TestCase;
 
 import org.junit.Test;
 
-import ungs.crm.entidades.Cliente;
+import ungs.crm.entity.Customer;
+import ungs.crm.model.ClienteModelo;
 
 public class ClienteModeloTest extends TestCase{
 	
@@ -14,17 +15,17 @@ public class ClienteModeloTest extends TestCase{
 	public void testGuardar()
 	{
 		//este está así nomás porque el guardar persistido aún no está implementado bien, pero igual anda
-		ClienteModelo.getInstance().guardar(new Cliente());
+		ClienteModelo.getInstance().guardar(new Customer());
 	}
 	
 	@Test
 	public void testGetAll()
 	{
 		//este está así nomás porque el guardar persistido aún no está implementado bien, pero igual anda
-		List<Cliente> clientes = ClienteModelo.getInstance().buscarTodos();
+		List<Customer> clientes = ClienteModelo.getInstance().buscarTodos();
 		System.out.println("cantidad: "+clientes.size());
 		
-		for(Cliente c:clientes){
+		for(Customer c:clientes){
 			
 			System.out.println(c.toString());
 		}
@@ -34,10 +35,10 @@ public class ClienteModeloTest extends TestCase{
 	public void testGetbyName()
 	{
 		//este está así nomás porque el guardar persistido aún no está implementado bien, pero igual anda
-		List<Cliente> clientes = ClienteModelo.getInstance().buscarPorNombre("Google");
+		List<Customer> clientes = ClienteModelo.getInstance().buscarPorNombre("Google");
 		System.out.println("cantidad: "+clientes.size());
 		
-		for(Cliente c:clientes){
+		for(Customer c:clientes){
 			
 			System.out.println(c.toString());
 		}

@@ -1,11 +1,11 @@
-package ungs.crm.modelo;
+package ungs.crm.model;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-import ungs.crm.entidades.Estado;
+import ungs.crm.entity.Estado;
 
 public class EstadoModelo {
 	public Estado getEstadoByCli(long idCliente)

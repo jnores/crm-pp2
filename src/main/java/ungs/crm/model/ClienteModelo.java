@@ -1,4 +1,4 @@
-package ungs.crm.modelo;
+package ungs.crm.model;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -11,7 +11,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import javax.swing.JOptionPane;
 
-import ungs.crm.entidades.Cliente;
+import ungs.crm.entity.Customer;
 
 //el modelo es el mismo para desktop, web, y cualquier otro universo
 public class ClienteModelo {
@@ -29,7 +29,7 @@ public class ClienteModelo {
 		return cm;
 	}
 	
-	public void guardar(Cliente cliente)
+	public void guardar(Customer cliente)
 	{		
 			           
             EntityTransaction tx = manager.getTransaction();
@@ -40,29 +40,29 @@ public class ClienteModelo {
 			JOptionPane.showMessageDialog(null,"Cliente grabado");
 	}
 
-	public Cliente buscarPorId(long id) {
+	public Customer buscarPorId(long id) {
 		// TODO Auto-generated method stub
-		Cliente c = null;
-		c = manager.find(Cliente.class, id);
+		Customer c = null;
+		c = manager.find(Customer.class, id);
 		return c;
 	}
 	
-	public List<Cliente> buscarTodos() {
+	public List<Customer> buscarTodos() {
 		// TODO Auto-generated method stub
-		List<Cliente> c = null;
+		List<Customer> c = null;
 
 		c= manager.createQuery("select p from Cliente p").getResultList();
 
 		return c;
 	}
 	
-	public List<Cliente> buscarPorNombre(String nombre) {
+	public List<Customer> buscarPorNombre(String nombre) {
 		// TODO Auto-generated method stub
-		List<Cliente> c = null;
+		List<Customer> c = null;
 		nombre+="%";
 		CriteriaBuilder builder = manager.getCriteriaBuilder();
-		CriteriaQuery<Cliente> criteria = builder.createQuery(Cliente.class);
-		Root<Cliente> pRoot = criteria.from(Cliente.class);
+		CriteriaQuery<Customer> criteria = builder.createQuery(Customer.class);
+		Root<Customer> pRoot = criteria.from(Customer.class);
 
 		criteria.where(
 				builder.like(
@@ -72,7 +72,7 @@ public class ClienteModelo {
 						);
 
 
-		TypedQuery<Cliente> tq = manager.createQuery(criteria);
+		TypedQuery<Customer> tq = manager.createQuery(criteria);
         	tq.setParameter("nombre", nombre);
         c = tq.getResultList();
 
