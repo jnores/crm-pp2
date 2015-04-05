@@ -13,7 +13,7 @@ import ungs.crm.entity.Conversation;
 import ungs.crm.entity.Customer;
 import ungs.crm.model.ConversationModel;
 
-public class ConversationController extends HttpServlet {
+public class ConversationController extends HttpServlet  {
 
 	/**
 	 * 
