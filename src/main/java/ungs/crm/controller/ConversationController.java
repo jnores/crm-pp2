@@ -31,13 +31,13 @@ public class ConversationController extends HttpServlet {
 			  throws ServletException, IOException 
 			  {		
 				//aca viene del postback lo que hay en el campo de busqueda
-				String op = request.getParameter("busquedaCliente");				
+				String op = request.getParameter("Cliente");				
 				RequestDispatcher rd = null;
 				try
 				{
-					if (op.equals("GOOGLE"))
-					{
-						Customer cliente = new Customer("G001","GOOGLE");										
+					Customer cliente = new Customer("G001","GOOGLE");
+					if (op.toUpperCase().equals(cliente.getRazonSocial()))
+					{	
 						ArrayList<Conversation> conversaciones = new ConversationModel().obtenerContactos(cliente);
 						request.setAttribute("conversaciones", conversaciones);
 						rd = request.getRequestDispatcher("conversation.jsp");					

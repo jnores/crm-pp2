@@ -10,7 +10,7 @@
 </head>
 
 <form action="ConversationController">
-	<div>Búsqueda:<input type="text" style="width: 50%" name="busquedaCliente"></div>
+	<div>Búsqueda:<input type="text" style="width: 50%" name="Cliente"></div>
 	<br>
 	
 	<TABLE BORDER="1">
