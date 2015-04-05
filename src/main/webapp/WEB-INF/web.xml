@@ -11,4 +11,14 @@
     <servlet-name>CustomerController</servlet-name>
     <url-pattern>/CustomerController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ConversationController</display-name>
+    <servlet-name>ConversationController</servlet-name>
+    <servlet-class>ungs.crm.controller.ConversationController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConversationController</servlet-name>
+    <url-pattern>/ConversationController</url-pattern>
+  </servlet-mapping>
 </web-app>

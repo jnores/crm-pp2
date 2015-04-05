@@ -21,7 +21,7 @@ public class CustomerController extends HttpServlet {
 						  throws ServletException, IOException {
 
 		//acá viene del postback lo que hay en el campo razon social
-		String razonSocial = request.getParameter("razonSocial");
+		//String razonSocial = request.getParameter("razonSocial");
 		
 		RequestDispatcher rd = null;
 		

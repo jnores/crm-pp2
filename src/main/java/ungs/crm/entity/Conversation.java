@@ -4,24 +4,7 @@ public class Conversation {
 	private String tipoContacto,
 				   descripcion,
 				   fecha_Hora;
-	private int idCliente, idContacto;
-
-	public int getIdContacto() {
-		return idContacto;
-	}
-
-	public void setIdContacto(int idContacto) {
-		this.idContacto = idContacto;
-	}
-
-	public int getIdCliente() {
-		return idCliente;
-	}
-
-	public void setIdCliente(int idCliente) {
-		this.idCliente = idCliente;
-	}
-
+	
 	public String getTipoContacto() {
 		return tipoContacto;
 	}
