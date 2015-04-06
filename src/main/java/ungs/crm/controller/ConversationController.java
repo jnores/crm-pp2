@@ -34,9 +34,9 @@ public class ConversationController extends HttpServlet  {
 				String op = request.getParameter("Cliente");				
 				RequestDispatcher rd = null;
 				try
-				{
+				{					
 					Customer cliente = new Customer("G001","GOOGLE");
-					if (op.toUpperCase().equals(cliente.getRazonSocial()))
+					if (op.equalsIgnoreCase(cliente.getRazonSocial()))
 					{	
 						ArrayList<Conversation> conversaciones = new ConversationModel().obtenerContactos(cliente);
 						request.setAttribute("conversaciones", conversaciones);

@@ -15,10 +15,14 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JButton;
 
+import ungs.crm.controllerDesktop.InterfaceConversation;
 import ungs.crm.entity.Conversation;
+import ungs.crm.entity.Customer;
 
 import java.awt.event.ActionEvent;
 import java.util.List;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class ContactoVistaDesktop extends JFrame {
 
@@ -27,28 +31,37 @@ public class ContactoVistaDesktop extends JFrame {
 	private JTable table;
 	private JButton btnVer;
 	private int NUMEROS_COLUMNA = 3;
+	private InterfaceConversation interfaceConversation;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					ContactoVistaDesktop frame = new ContactoVistaDesktop();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	
+	//esto es KAKO
+	
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					ContactoVistaDesktop frame = new ContactoVistaDesktop(null);
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
+	//esto es KAKO
 	/**
 	 * Create the frame.
 	 */
-	public ContactoVistaDesktop() {
-		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+	public ContactoVistaDesktop(InterfaceConversation interConversation) {
+		/*************/
+		this.interfaceConversation = interConversation;
+		/*************/
+		
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);		
 		setBounds(100, 100, 578, 227);		
 		setLocationRelativeTo(null);
 		contentPane = new JPanel();
@@ -61,6 +74,14 @@ public class ContactoVistaDesktop extends JFrame {
 		contentPane.add(lblBsqueda);
 		
 		txtBusqueda = new JTextField();
+		txtBusqueda.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyReleased(KeyEvent arg0) {
+				if(arg0.getKeyCode() == 10)
+					setearGrilla(interfaceConversation.getConversations(
+							new Customer("G001","GOOGLE")));
+			}
+		});
 		txtBusqueda.setBounds(73, 11, 479, 20);
 		contentPane.add(txtBusqueda);
 		txtBusqueda.setColumns(10);
@@ -80,23 +101,17 @@ public class ContactoVistaDesktop extends JFrame {
 		));
 		scrollPane.setViewportView(table);
 		
-		JLabel lblGoogleArgentinaSrl = new JLabel("GOOGLE ARGENTINA S.R.L");
+		JLabel lblGoogleArgentinaSrl = new JLabel("");
 		lblGoogleArgentinaSrl.setBounds(10, 39, 414, 14);
 		contentPane.add(lblGoogleArgentinaSrl);
-		
-		btnVer = new JButton("Ver");		
-		btnVer.setBounds(463, 35, 89, 23);
-		contentPane.add(btnVer);
+				
+		setVisible(true);
 	}
 
-	public void agregarEvtVerDatos(ActionListener verDatosListener) {		
-		btnVer.addActionListener(verDatosListener);
-	}
-	
 	public void setearGrilla(List<Conversation> listaContactos)
-	{
+	{		
 		Object[] datos = new Object[NUMEROS_COLUMNA];
-		DefaultTableModel modeloTabla = (DefaultTableModel) table.getModel();
+		DefaultTableModel modeloTabla = (DefaultTableModel) table.getModel();		
 		
 		for(Conversation c : listaContactos)
 		{
@@ -106,9 +121,5 @@ public class ContactoVistaDesktop extends JFrame {
 			modeloTabla.addRow(datos);
 		}
 		table.setModel(modeloTabla);
-	}
-
-	public void mensajeError(String message) {
-		JOptionPane.showMessageDialog(this, message);		
 	}
 }
