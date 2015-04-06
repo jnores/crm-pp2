@@ -20,30 +20,30 @@ public class Data {
 		//esto es cochino
 		ArrayList<Conversation> ret = new ArrayList<Conversation>();
 		
-		if (cliente.getRazonSocial().equals("GOOGLE"))
+		if (cliente.getRazonSocial().equalsIgnoreCase("GOOGLE"))
 		{
 			Conversation c = new Conversation();
 			Conversation c1 = new Conversation();
 			Conversation c2 = new Conversation();
 			Conversation c3 = new Conversation();
 			
-			c.setTipoContacto("Telefonico");
-			c.setDescripcion("SolicitÛ presupuesto sobre pack arduino");
+			c.setTipoContacto("Telef√≥nico");
+			c.setDescripcion("Solicit√≥ presupuesto sobre pack arduino");
 			c.setFecha_Hora("20/03/2015 15:30");
 			
 			
 			c1.setTipoContacto("Telefonico");
-			c1.setDescripcion("ManifestÛ queja por tardanza de envÌo");
+			c1.setDescripcion("Manifest√≥ queja por tardanza de env√≠o");
 			c1.setFecha_Hora("20/03/2015 16:30");
 			
 			
-			c2.setTipoContacto("Correo electrÛnico");
-			c2.setDescripcion("Se enviÛ notificaciÛn x");
+			c2.setTipoContacto("Correo electr√≥nico");
+			c2.setDescripcion("Se envi√≥ notificaci√≥n x");
 			c2.setFecha_Hora("20/03/2015 17:30");
 			
 			
-			c3.setTipoContacto("Correo electrÛnico");
-			c3.setDescripcion("Otra descripciÛn");
+			c3.setTipoContacto("Correo electr√≥nico");
+			c3.setDescripcion("Otra descripci√≥n");
 			c3.setFecha_Hora("20/03/2015 18:30");
 			
 			
