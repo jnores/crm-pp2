@@ -36,7 +36,7 @@ public class ConversationController extends HttpServlet  {
 				try
 				{
 					Customer cliente = new Customer("G001","GOOGLE");
-					if (op.toUpperCase().equals(cliente.getRazonSocial()))
+					if (op.equalsIgnoreCase(cliente.getRazonSocial()))
 					{	
 						ArrayList<Conversation> conversaciones = new ConversationModel().obtenerContactos(cliente);
 						request.setAttribute("conversaciones", conversaciones);
