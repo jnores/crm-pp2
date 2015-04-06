@@ -112,7 +112,7 @@ public class ContactoVistaDesktop extends JFrame {
 	{		
 		Object[] datos = new Object[NUMEROS_COLUMNA];
 		DefaultTableModel modeloTabla = (DefaultTableModel) table.getModel();		
-		
+		modeloTabla.setRowCount(0);
 		for(Conversation c : listaContactos)
 		{
 			datos[0] = c.getTipoContacto();
