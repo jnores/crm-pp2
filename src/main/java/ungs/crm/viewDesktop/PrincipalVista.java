@@ -11,7 +11,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.UIManager;
 
-import ungs.crm.controller.*;
+import ungs.crm.controllerWeb.*;
 import ungs.crm.model.*;
 
 import java.awt.event.MouseAdapter;

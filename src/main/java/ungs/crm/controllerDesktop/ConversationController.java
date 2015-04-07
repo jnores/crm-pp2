@@ -5,10 +5,10 @@ import java.util.List;
 import ungs.crm.entity.Conversation;
 import ungs.crm.entity.Customer;
 import ungs.crm.model.ConversationModel;
-import ungs.crm.viewDesktop.ContactoVistaDesktop;
+import ungs.crm.viewDesktop.ConversationViewDesktop;
 
 public class ConversationController implements InterfaceConversation {
-	private ContactoVistaDesktop vistaDesktop;
+	private ConversationViewDesktop viewDesktop;
 	//private Conversation conversation;
 	private ConversationModel conversationModel;
 	
@@ -16,13 +16,12 @@ public class ConversationController implements InterfaceConversation {
 	{
 		this.conversationModel = new ConversationModel();
 		//this.conversation = new Conversation();
-		this.vistaDesktop = new ContactoVistaDesktop(this);
+		this.viewDesktop = new ConversationViewDesktop(this);
 	}
 
 	@Override
 	public List<Conversation> getConversations(Customer customer) {
-		// TODO Auto-generated method stub
-		return this.conversationModel.obtenerContactos(customer);
+		return this.conversationModel.getDataConversations(customer);
 	}
 
 }

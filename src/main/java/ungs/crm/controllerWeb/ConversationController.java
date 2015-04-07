@@ -1,4 +1,4 @@
-package ungs.crm.controller;
+package ungs.crm.controllerWeb;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -38,7 +38,7 @@ public class ConversationController extends HttpServlet  {
 					Customer cliente = new Customer("G001","GOOGLE");
 					if (op.equalsIgnoreCase(cliente.getRazonSocial()))
 					{	
-						ArrayList<Conversation> conversaciones = new ConversationModel().obtenerContactos(cliente);
+						ArrayList<Conversation> conversaciones = new ConversationModel().getDataConversations(cliente);
 						request.setAttribute("conversaciones", conversaciones);
 						rd = request.getRequestDispatcher("conversation.jsp");					
 						rd.forward(request, response);

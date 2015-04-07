@@ -24,7 +24,7 @@ import java.util.List;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-public class ContactoVistaDesktop extends JFrame {
+public class ConversationViewDesktop extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtBusqueda;
@@ -56,7 +56,7 @@ public class ContactoVistaDesktop extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public ContactoVistaDesktop(InterfaceConversation interConversation) {
+	public ConversationViewDesktop(InterfaceConversation interConversation) {
 		/*************/
 		this.interfaceConversation = interConversation;
 		/*************/
@@ -111,7 +111,8 @@ public class ContactoVistaDesktop extends JFrame {
 	public void setearGrilla(List<Conversation> listaContactos)
 	{		
 		Object[] datos = new Object[NUMEROS_COLUMNA];
-		DefaultTableModel modeloTabla = (DefaultTableModel) table.getModel();		
+		DefaultTableModel modeloTabla = (DefaultTableModel) table.getModel();
+		modeloTabla.setRowCount(0);
 		
 		for(Conversation c : listaContactos)
 		{

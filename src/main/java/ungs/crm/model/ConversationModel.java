@@ -7,7 +7,7 @@ import ungs.crm.entity.Customer;
 
 public class ConversationModel {
 
-	public ArrayList<Conversation> obtenerContactos(Customer cliente)
+	public ArrayList<Conversation> getDataConversations(Customer cliente)
 	{
 		return Data.obtenerContactos(cliente);
 	}

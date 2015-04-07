@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import ungs.crm.entity.Conversation;
 import ungs.crm.entity.Customer;
+import ungs.crm.entity.State;
 
 public class Data {
 	public Conversation obtenerContacto(int idCliente,
@@ -55,6 +56,13 @@ public class Data {
 		
 		return ret;
 		
+	}
+
+	public static State getState(Customer customer) {
+		State stateRet = null;
+		if (customer.getRazonSocial().equalsIgnoreCase("GOOGLE"))
+			stateRet = new State("ROJO", "Descripción para rojo");
+		return stateRet;
 	}
 
 }

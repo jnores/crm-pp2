@@ -16,34 +16,37 @@ import javax.swing.border.EmptyBorder;
 
 import javax.swing.JButton;
 
-public class EstadoVistaDesktop extends JFrame {
+import ungs.crm.controllerDesktop.InterfaceState;
+
+public class StateViewDesktop extends JFrame {
 
 //	private EstadoControlador controlador;
 	private JPanel contentPane;
 	private JTextField textField, txtRojo;
 	private JButton btnBuscar;
+	private InterfaceState interfaceState;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					EstadoVistaDesktop frame = new EstadoVistaDesktop();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					EstadoVistaDesktop frame = new EstadoVistaDesktop();
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the frame.
 	 */
-	public EstadoVistaDesktop() {
-		
+	public StateViewDesktop(InterfaceState interfaceState) {
+		this.interfaceState = interfaceState;
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 137);
 		setLocationRelativeTo(null);
@@ -80,6 +83,7 @@ public class EstadoVistaDesktop extends JFrame {
 		btnBuscar = new JButton("Ver");
 		btnBuscar.setBounds(345, 10, 89, 23);
 		contentPane.add(btnBuscar);
+		setVisible(true);
 	}
 
 //	public void setEstado(Estado estadoByCli) {		
@@ -90,7 +94,7 @@ public class EstadoVistaDesktop extends JFrame {
 //		this.controlador=controlador;
 //	}
 
-	public void evtBusquedaEstado(ActionListener estadosListener) {
-		btnBuscar.addActionListener(estadosListener);
-	}
+//	public void evtBusquedaEstado(ActionListener estadosListener) {
+//		btnBuscar.addActionListener(estadosListener);
+//	}
 }
