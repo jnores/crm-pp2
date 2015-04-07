@@ -17,7 +17,7 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.border.EmptyBorder;
 
-public class ClienteVistaDesktop extends JFrame {
+public class CustomerViewDesktop extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtRazonSocial;
@@ -30,7 +30,7 @@ public class ClienteVistaDesktop extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ClienteVistaDesktop frame = new ClienteVistaDesktop();
+					CustomerViewDesktop frame = new CustomerViewDesktop();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -46,7 +46,7 @@ public class ClienteVistaDesktop extends JFrame {
 	 * @throws InstantiationException 
 	 * @throws ClassNotFoundException 
 	 */
-	public ClienteVistaDesktop()  {
+	public CustomerViewDesktop()  {
 		
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 160);

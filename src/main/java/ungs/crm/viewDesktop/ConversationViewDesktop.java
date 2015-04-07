@@ -60,7 +60,7 @@ public class ConversationViewDesktop extends JFrame {
 		/*************/
 		this.interfaceConversation = interConversation;
 		/*************/
-		
+		setTitle("Historial de conversaciones");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);		
 		setBounds(100, 100, 578, 227);		
 		setLocationRelativeTo(null);
@@ -78,8 +78,7 @@ public class ConversationViewDesktop extends JFrame {
 			@Override
 			public void keyReleased(KeyEvent arg0) {
 				if(arg0.getKeyCode() == 10)
-					setearGrilla(interfaceConversation.getConversations(
-							new Customer("G001","GOOGLE")));
+					setGrid();
 			}
 		});
 		txtBusqueda.setBounds(73, 11, 479, 20);
@@ -108,13 +107,16 @@ public class ConversationViewDesktop extends JFrame {
 		setVisible(true);
 	}
 
-	public void setearGrilla(List<Conversation> listaContactos)
-	{		
+	private void setGrid()
+	{	
+		List<Conversation> listConversation = interfaceConversation.getConversations(
+				new Customer("G001","GOOGLE"));
+		
 		Object[] datos = new Object[NUMEROS_COLUMNA];
 		DefaultTableModel modeloTabla = (DefaultTableModel) table.getModel();
 		modeloTabla.setRowCount(0);
 		
-		for(Conversation c : listaContactos)
+		for(Conversation c : listConversation)
 		{
 			datos[0] = c.getTipoContacto();
 			datos[1] = c.getDescripcion();

@@ -3,6 +3,8 @@ package ungs.crm.viewDesktop;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -17,13 +19,15 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 
 import ungs.crm.controllerDesktop.InterfaceState;
+import ungs.crm.entity.Customer;
+import ungs.crm.entity.State;
 
 public class StateViewDesktop extends JFrame {
 
 //	private EstadoControlador controlador;
 	private JPanel contentPane;
 	private JTextField textField, txtRojo;
-	private JButton btnBuscar;
+	
 	private InterfaceState interfaceState;
 
 	/**
@@ -46,6 +50,7 @@ public class StateViewDesktop extends JFrame {
 	 * Create the frame.
 	 */
 	public StateViewDesktop(InterfaceState interfaceState) {
+		setTitle("Estados de clientes");
 		this.interfaceState = interfaceState;
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 137);
@@ -61,11 +66,17 @@ public class StateViewDesktop extends JFrame {
 		
 		textField = new JTextField();
 		textField.setColumns(10);
-		textField.setEditable(false);
-		textField.setBounds(73, 11, 265, 20);
+		textField.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyReleased(KeyEvent arg0) {
+				if(arg0.getKeyCode() == 10)
+					asignData();
+			}
+		});
+		textField.setBounds(73, 11, 351, 20);
 		contentPane.add(textField);
 		
-		JLabel label_1 = new JLabel("GOOGLE ARGENTINA S.R.L");
+		JLabel label_1 = new JLabel("");
 		label_1.setBounds(10, 39, 414, 14);
 		contentPane.add(label_1);
 		
@@ -79,22 +90,14 @@ public class StateViewDesktop extends JFrame {
 		txtRojo.setBounds(73, 64, 77, 20);
 		contentPane.add(txtRojo);
 		txtRojo.setColumns(10);
-		
-		btnBuscar = new JButton("Ver");
-		btnBuscar.setBounds(345, 10, 89, 23);
-		contentPane.add(btnBuscar);
+				
 		setVisible(true);
 	}
+	
+	private void asignData()
+	{
+		State state = interfaceState.getState(new Customer("G001","GOOGLE"));
+		txtRojo.setText(state.getNombre());
+	}
 
-//	public void setEstado(Estado estadoByCli) {		
-//		txtRojo.setText(estadoByCli.getNombre());
-//	}
-//	
-//	public void setControlador(EstadoControlador controlador){
-//		this.controlador=controlador;
-//	}
-
-//	public void evtBusquedaEstado(ActionListener estadosListener) {
-//		btnBuscar.addActionListener(estadosListener);
-//	}
 }

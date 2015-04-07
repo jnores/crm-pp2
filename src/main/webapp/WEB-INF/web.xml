@@ -15,7 +15,7 @@
     <description></description>
     <display-name>ConversationController</display-name>
     <servlet-name>ConversationController</servlet-name>
-    <servlet-class>ungs.crm.controller.ConversationController</servlet-class>
+    <servlet-class>ungs.crm.controllerWeb.ConversationController</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ConversationController</servlet-name>

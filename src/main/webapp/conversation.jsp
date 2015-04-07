@@ -22,7 +22,7 @@
 
             </TR>
 	
-	<c:forEach items="${conversaciones}" var="conversacion">
+	<c:forEach items="${conversations}" var="conversacion">
         <tr>
             <td>${conversacion.tipoContacto}</td>
             <td>${conversacion.descripcion}</td>

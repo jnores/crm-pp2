@@ -15,10 +15,6 @@ import ungs.crm.model.ConversationModel;
 
 public class ConversationController extends HttpServlet  {
 
-	/**
-	 * 
-	 */
-	
 	private static final long serialVersionUID = 1L;
 	
 	public ConversationController()
@@ -35,11 +31,11 @@ public class ConversationController extends HttpServlet  {
 				RequestDispatcher rd = null;
 				try
 				{					
-					Customer cliente = new Customer("G001","GOOGLE");
-					if (op.equalsIgnoreCase(cliente.getRazonSocial()))
+					Customer customer = new Customer("G001","GOOGLE");
+					if (op.equalsIgnoreCase(customer.getRazonSocial()))
 					{	
-						ArrayList<Conversation> conversaciones = new ConversationModel().getDataConversations(cliente);
-						request.setAttribute("conversaciones", conversaciones);
+						ArrayList<Conversation> conversations = new ConversationModel().getDataConversations(customer);
+						request.setAttribute("conversations", conversations);
 						rd = request.getRequestDispatcher("conversation.jsp");					
 						rd.forward(request, response);
 					}
