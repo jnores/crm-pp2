@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import ungs.crm.entity.Conversation;
 
-public class ContactoEntidadesTest extends TestCase{
+public class ConversationEntityTest extends TestCase{
 	@Test
 	public void testContacto()
 	{

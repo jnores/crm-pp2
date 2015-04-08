@@ -7,7 +7,7 @@ import org.junit.Test;
 //import ungs.crm.view.ClienteVistaDesktop;
 import junit.framework.TestCase;
 
-public class ClienteControladorTest extends TestCase {
+public class CustomerControllerTest extends TestCase {
 	@Test
 	public void testControladoresCliente()
 	{

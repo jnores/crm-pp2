@@ -6,7 +6,7 @@ import org.junit.Test;
 
 
 
-public class EstadoEntidadesTest extends TestCase{	
+public class StateEntityTest extends TestCase{	
 	@Test
 	public void testEstado()
 	{

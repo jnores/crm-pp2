@@ -6,7 +6,7 @@ import junit.framework.TestCase;
 
 import org.junit.Test;
 
-public class ClienteModeloTest extends TestCase{
+public class CustomerModelTest extends TestCase{
 	
 	@Test
 	public void testGuardar()

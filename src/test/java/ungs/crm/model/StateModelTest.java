@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 
 import org.junit.Test;
 
-public class EstadoModeloTest extends TestCase {
+public class StateModelTest extends TestCase {
 	@Test
 	public void testEstado()
 	{

@@ -6,7 +6,7 @@ import junit.framework.TestCase;
 
 import org.junit.Test;
 
-public class ContactoModeloTest extends TestCase{
+public class ConversationModelTest extends TestCase{
 	
 	@Test
 	//Busca historial de contactos de un cliente que no existe

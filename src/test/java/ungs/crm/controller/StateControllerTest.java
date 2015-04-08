@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import junit.framework.TestCase;
 
-public class EstadoControladorTest extends TestCase{
+public class StateControllerTest extends TestCase{
 	@Test
 	public void noimplementado()
 	{
