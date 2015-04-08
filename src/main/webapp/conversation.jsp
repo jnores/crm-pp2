@@ -6,11 +6,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Historial de conversaciones</title>
-
+<link type="text/css" rel="stylesheet" href="./css/style.css" />
 </head>
 
 <form action="ConversationController">
-	<div>Búsqueda:<input type="text" style="width: 50%" name="Cliente"></div>
+	<div><label>Búsqueda:</label><input type="text" name="Cliente"></div>
 	<br>
 	
 	<TABLE BORDER="1">
