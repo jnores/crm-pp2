@@ -15,17 +15,23 @@ table {
 	border-color: #999999;
 	border-collapse: collapse;
 }
-table th {
+table thead th {
 	background:#b5cfd2 url('/img/cell-blue.jpg');
 	border-width: 1px;
 	padding: 8px;
 	border-style: solid;
 	border-color: #999999;
 }
-table td {
-	background:#dcddc0 url('/img/cell-grey.jpg');
+table tbody td {
 	border-width: 1px;
 	padding: 8px;
 	border-style: solid;
 	border-color: #999999;
+}
+table tr {
+	background:#dcddc0 url('/img/cell-grey.jpg');;
+}
+
+table tr:hover {
+	background:#ffffff;
 }
