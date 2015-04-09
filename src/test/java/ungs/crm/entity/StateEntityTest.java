@@ -8,12 +8,35 @@ import org.junit.Test;
 
 public class StateEntityTest extends TestCase{	
 	@Test
-	public void testEstado()
+	public void testEstadoConstructor()
 	{
-//		Estado e = new Estado();
-//		e.setNombre("Rojo");
-//		e.setDescripcion("malo");
-//		assertTrue(e.getNombre().equalsIgnoreCase("Rojo") && e.getDescripcion().equals("malo"));
+		State s = new State("Rojo","malo malo");
+		s.setNombre("Verde");
+		assertTrue(s.getNombre().equalsIgnoreCase("Rojo") && s.getDescripcion().equals("malo malo"));
 	}
-
+	
+	@Test
+	public void testEstadoName()
+	{
+		State s = new State("Rojo","malo malo");
+		s.setNombre("Verde");
+		assertTrue(s.getNombre().equalsIgnoreCase("Verde"));
+	}
+	
+	@Test
+	public void testEstadoDescription()
+	{
+		State s = new State("Rojo","malo malo");
+		s.setDescripcion("malo");
+		assertTrue( s.getDescripcion().equals("malo"));
+	}
+	
+	@Test
+	public void testEstadoSetters()
+	{
+		State s = new State("Rojo","malo malo");
+		s.setNombre("Amarillo");
+		s.setDescripcion("medio");
+		assertTrue(s.getNombre().equalsIgnoreCase("Amarillo") && s.getDescripcion().equals("medio"));
+	}
 }

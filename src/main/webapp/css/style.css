@@ -16,7 +16,7 @@ table {
 	border-collapse: collapse;
 }
 table thead th {
-	background:#b5cfd2 url('/img/cell-blue.jpg');
+	background:#b5cfd2;
 	border-width: 1px;
 	padding: 8px;
 	border-style: solid;
@@ -28,10 +28,10 @@ table tbody td {
 	border-style: solid;
 	border-color: #999999;
 }
-table tr {
-	background:#dcddc0 url('/img/cell-grey.jpg');;
+table tbody tr {
+	background:#dcddc0;
 }
 
-table tr:hover {
+table tbody tr:hover {
 	background:#ffffff;
 }

@@ -8,6 +8,7 @@ import java.awt.event.KeyEvent;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
@@ -70,7 +71,10 @@ public class StateViewDesktop extends JFrame {
 			@Override
 			public void keyReleased(KeyEvent arg0) {
 				if(arg0.getKeyCode() == 10)
-					asignData();
+					if (textField.getText().isEmpty())
+						JOptionPane.showMessageDialog(null, "Debe ingresar un nombre de cliente!!");
+					else
+						asignData();
 			}
 		});
 		textField.setBounds(73, 11, 351, 20);

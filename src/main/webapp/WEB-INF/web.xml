@@ -5,7 +5,7 @@
     <description></description>
     <display-name>CustomerController</display-name>
     <servlet-name>CustomerController</servlet-name>
-    <servlet-class>ungs.crm.controller.CustomerController</servlet-class>
+    <servlet-class>ungs.crm.controllerWeb.CustomerController</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CustomerController</servlet-name>
