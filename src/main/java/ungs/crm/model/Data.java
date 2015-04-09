@@ -7,14 +7,15 @@ import ungs.crm.entity.Customer;
 import ungs.crm.entity.State;
 
 public class Data {
-	public Conversation obtenerContacto(int idCliente,
-			int idContacto)
-	{
-		Conversation ret = new Conversation();
-		if (idContacto == 2 && idCliente == 1)
-			ret = null;
-		return ret;
-	}
+//	public Conversation obtenerContacto(int idCliente,
+//			int idContacto)
+//	{
+////		Conversation ret = new Conversation();
+////		if (idContacto == 2 && idCliente == 1)
+////			ret = null;
+////		return ret;
+//		return null;
+//	}
 	
 	public static ArrayList<Conversation> obtenerContactos(Customer cliente)
 	{
@@ -23,30 +24,10 @@ public class Data {
 		
 		if (cliente.getRazonSocial().equalsIgnoreCase("GOOGLE"))
 		{
-			Conversation c = new Conversation();
-			Conversation c1 = new Conversation();
-			Conversation c2 = new Conversation();
-			Conversation c3 = new Conversation();
-			
-			c.setTipoContacto("Telefónico");
-			c.setDescripcion("Solicitó presupuesto sobre pack arduino");
-			c.setFecha_Hora("20/03/2015 15:30");
-			
-			
-			c1.setTipoContacto("Telefonico");
-			c1.setDescripcion("Manifestó queja por tardanza de envío");
-			c1.setFecha_Hora("20/03/2015 16:30");
-			
-			
-			c2.setTipoContacto("Correo electrónico");
-			c2.setDescripcion("Se envió notificación x");
-			c2.setFecha_Hora("20/03/2015 17:30");
-			
-			
-			c3.setTipoContacto("Correo electrónico");
-			c3.setDescripcion("Otra descripción");
-			c3.setFecha_Hora("20/03/2015 18:30");
-			
+			Conversation c = new Conversation("Telefónico","Solicitó presupuesto sobre pack arduino","20/03/2015 15:30");
+			Conversation c1 = new Conversation("Telefonico","Manifestó queja por tardanza de envío","20/03/2015 16:30");
+			Conversation c2 = new Conversation("Correo electrónico","Se envió notificación x","20/03/2015 17:30");
+			Conversation c3 = new Conversation("Correo electrónico","Otra descripción","20/03/2015 18:30");			
 			
 			ret.add(c);
 			ret.add(c1);
@@ -62,6 +43,8 @@ public class Data {
 		State stateRet = null;
 		if (customer.getRazonSocial().equalsIgnoreCase("GOOGLE"))
 			stateRet = new State("ROJO", "Descripción para rojo");
+		else if(customer.getRazonSocial().equalsIgnoreCase("SISTEMAS GLOBALES SA"))
+			stateRet = new State("VERDE", "Descripción para verde");
 		return stateRet;
 	}
 

@@ -14,17 +14,17 @@ public class Customer {
 		return razonSocial;
 	}
 
-	public void setRazonSocial(String razonSocial) {
-		this.razonSocial = razonSocial;
-	}
-
-	public String getCodigo() {
-		return codigo;
-	}
-
-	public void setCodigo(String codigo) {
-		this.codigo = codigo;
-	}
+//	public void setRazonSocial(String razonSocial) {
+//		this.razonSocial = razonSocial;
+//	}
+//
+//	public String getCodigo() {
+//		return codigo;
+//	}
+//
+//	public void setCodigo(String codigo) {
+//		this.codigo = codigo;
+//	}
 	
 
 }

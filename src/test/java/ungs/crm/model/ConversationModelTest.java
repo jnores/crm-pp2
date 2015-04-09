@@ -6,6 +6,8 @@ import junit.framework.TestCase;
 
 import org.junit.Test;
 
+import ungs.crm.entity.Customer;
+
 public class ConversationModelTest extends TestCase{
 	
 	@Test
@@ -18,10 +20,11 @@ public class ConversationModelTest extends TestCase{
 	
 	@Test
 	//La colección de historial de contactos devuelve 0 si se envía un cliente que no existe
-	//o bien, ese cliente existe, pero no posee registro de contactos.
-	public void testContCliInex_S_Historial()
+	//o bien, ese cliente existe, pero no posee registro de conversaciones.
+	public void testClientesSinRegistros()
 	{
-//		assertTrue(new ContactoModelo().obtenerContactos(2).size()==0);
+		Customer granix = new Customer("GR001","GRANIX SA");
+		assertTrue(new ConversationModel().getDataConversations(granix).size() ==0);
 	}
 	
 	@Test

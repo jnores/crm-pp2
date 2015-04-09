@@ -2,6 +2,7 @@ package ungs.crm.controller;
 
 import org.junit.Test;
 
+import ungs.crm.controllerWeb.CustomerController;
 //import ungs.crm.controller.ClienteControlador;
 //import ungs.crm.model.ClienteModelo;
 //import ungs.crm.view.ClienteVistaDesktop;
@@ -9,11 +10,10 @@ import junit.framework.TestCase;
 
 public class CustomerControllerTest extends TestCase {
 	@Test
-	public void testControladoresCliente()
+	public void testCustomerController()
 	{
-//		ClienteControlador cliControlador = new ClienteControlador(new ClienteVistaDesktop(),
-//				  ClienteModelo.getInstance());
-//		assertNotNull(cliControlador);
+		CustomerController customerController = new CustomerController();
+		assertNotNull(customerController);
 	}
 
 }

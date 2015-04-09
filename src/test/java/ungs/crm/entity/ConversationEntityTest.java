@@ -8,19 +8,12 @@ import ungs.crm.entity.Conversation;
 
 public class ConversationEntityTest extends TestCase{
 	@Test
-	public void testContacto()
+	public void testConversation()
 	{
-//		Conversation c = new Conversation();
-//		c.setIdContacto(1);
-//		c.setDescripcion("prueba");
-//		c.setFecha_Hora("01/01/2015");
-//		c.setTipoContacto("Telefono");
-//		c.setIdCliente(1);
-//		assertTrue(c.getDescripcion().equals("prueba") &&
-//				   c.getIdContacto() == 1 &&
-//				   c.getFecha_Hora().equals("01/01/2015") && 
-//				   c.getTipoContacto().equals("Telefono") &&
-//				   c.getIdCliente() == 1);
+		Conversation conversation = new Conversation("Telefono","Descripcion1","01/01/2015");
+		assertTrue(conversation.getTipoContacto().equals("Telefono") && 
+					conversation.getDescripcion().equals("Descripcion1") && 
+					conversation.getFecha_Hora().equals("01/01/2015"));
 	}
 
 }
