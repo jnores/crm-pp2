@@ -11,7 +11,6 @@ public class StateEntityTest extends TestCase{
 	public void testEstadoConstructor()
 	{
 		State s = new State("Rojo","malo malo");
-		s.setNombre("Verde");
 		assertTrue(s.getNombre().equalsIgnoreCase("Rojo") && s.getDescripcion().equals("malo malo"));
 	}
 	
