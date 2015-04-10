@@ -11,13 +11,8 @@ public class CustomerEntityTest extends TestCase {
 	@Test
 	public void testCliente()
 	{
-//		Customer c = new Customer();
-//		c.setId(1);
-//		c.setRazonSocial("prueba");
-//		c.setEstado(new Estado());
-//		assertTrue(c.getId()==1 &&
-//				   c.getRazonSocial().equals("prueba")
-//				   );
+		Customer granix = new Customer("GR001","GRANIX SA");
+		assertTrue(granix.getRazonSocial().equalsIgnoreCase("granix sa"));
 	}
 	
 

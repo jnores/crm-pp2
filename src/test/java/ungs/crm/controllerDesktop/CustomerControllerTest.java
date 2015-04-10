@@ -1,4 +1,4 @@
-package ungs.crm.controller;
+package ungs.crm.controllerDesktop;
 
 import org.junit.Test;
 

@@ -39,7 +39,7 @@ public class Data {
 		
 	}
 
-	public static State getState(Customer customer) {
+	static public State getState(Customer customer) {
 		State stateRet = null;
 		if (customer.getRazonSocial().equalsIgnoreCase("GOOGLE"))
 			stateRet = new State("ROJO", "Descripción para rojo");
