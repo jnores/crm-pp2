@@ -18,6 +18,7 @@ public class StateControllerTest extends TestCase{
 	@Test
 	public void testStateRojo()
 	{
+		
 		StateController sc = new StateController();
 		Customer google = new Customer("G0001","GOOGLE");
 		assertEquals(sc.getState(google).getNombre(),"ROJO");
@@ -32,7 +33,7 @@ public class StateControllerTest extends TestCase{
 	}
 	
 	@Test
-	public void testStateAmarillo()
+	public void testStateClienteInexistente()
 	{
 		StateController sc = new StateController();
 		Customer granix = new Customer("GR001","GRANIX SA");
