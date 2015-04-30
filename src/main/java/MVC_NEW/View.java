@@ -86,6 +86,8 @@ public class View extends JFrame implements java.util.Observer {
 
 	@Override
 	public void update(Observable arg0, Object arg1) {
+		//en teoría, la vista no debe saber como el estado muestra sus cosas.. 
+		//adapter "Mostrable" o algo así.. muchas clases de tipo interfaces y esas cosas me imagino
 		txtEstado.setText(((State)arg1).getNombre());
 	}
 }
