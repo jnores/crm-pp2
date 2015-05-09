@@ -1,4 +1,4 @@
-package MVC_NEW;
+package MVC_NEW.copy;
 
 public class MVC {
 
@@ -12,7 +12,7 @@ public class MVC {
 		model.addObserver(view);			
 
 		//Crea el controlador. se le informa sobre el modelo
-		Controller controller = new Controller(model);
+		Controller_ controller = new Controller_(model);
 
 		//se le informa a la vista acerca del controlador 
 		view.addController(controller);
