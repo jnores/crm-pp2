@@ -11,6 +11,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.UIManager;
 
+import ungs.crm.controller.Controller;
 import ungs.crm.controllerDesktop.ConversationController;
 import ungs.crm.controllerDesktop.StateController;
 import ungs.crm.controllerWeb.*;
@@ -21,28 +22,18 @@ import java.awt.event.MouseEvent;
 
 public class PrincipalView extends JFrame {
 
+	private Controller controller;
+	
 	private JPanel contentPane;
+	
+	private JFrame stateView;
 
-	/**
-	 * Launch the application.
-	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					PrincipalView frame = new PrincipalView();
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
-
-	/**
+		/**
 	 * Create the frame.
 	 */
-	public PrincipalView() {
+	public PrincipalView(Controller controller) {
+		this.controller=controller;
+		
 		try{
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 		}		
@@ -94,7 +85,8 @@ public class PrincipalView extends JFrame {
 		mntmVerEstados.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent arg0) {
-				new StateController();
+//				new StateController();
+				clickMenuEstados();
 			}
 		});
 		
@@ -105,6 +97,14 @@ public class PrincipalView extends JFrame {
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
 		setVisible(true);
+	}
+	
+	private void clickMenuEstados(){
+		if (this.stateView == null) {
+			this.stateView = new StateViewDesktop(controller);
+		} else {
+			this.stateView.setVisible(true);
+		}
 	}
 
 }

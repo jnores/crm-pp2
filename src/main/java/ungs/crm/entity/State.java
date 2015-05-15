@@ -1,10 +1,22 @@
 package ungs.crm.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class State {
+	@Id
+	@GeneratedValue
 	private long id;
-	private String nombre,
-				   descripcion;
+	@Column
+	private String nombre;
+	@Column
+	private String descripcion;
 	
+	public State(){}
+			
 	public State(String nombre,
 				 String descripcion)
 	{

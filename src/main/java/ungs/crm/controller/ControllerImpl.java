@@ -14,7 +14,7 @@ public class ControllerImpl implements Controller {
 	}
 	@Override
 	public void getState(String razonSocial) {
-		System.out.println("Controller Impl");
+//		System.out.println("Controller Impl");
 		this.modelo.getState(razonSocial);
 	}
 

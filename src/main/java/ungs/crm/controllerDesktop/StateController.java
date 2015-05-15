@@ -12,11 +12,11 @@ public class StateController implements InterfaceState {
 	public StateController()
 	{
 		this.stateModel = new StateModel();
-		this.stateView = new StateViewDesktop(this);
+//		this.stateView = new StateViewDesktop(this);
 	}
 
 	@Override
 	public State getState(Customer customer) {
-		return this.stateModel.getState(customer);
+		return null;//this.stateModel.getState(customer);
 	}
 }

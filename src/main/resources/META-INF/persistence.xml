@@ -6,8 +6,8 @@
         transaction-type="RESOURCE_LOCAL">
  
          <class>ungs.crm.entity.State</class>
+         
          <class>ungs.crm.entity.Customer</class>
-         <class>ungs.crm.entity.Conversation</class>
          
         <properties>
  
@@ -18,7 +18,7 @@
             
             <!--
             Esta no crea el esquema de forma automatica, la de abajo si  
-            <property name="hbm2ddl.auto" value="create" />
+            <property name="hbm2ddl.auto" value="create"|"update />
             -->
             <property name="hibernate.hbm2ddl.auto" value="update" />            
  

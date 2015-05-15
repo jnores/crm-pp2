@@ -10,7 +10,7 @@ public class Model extends Observable {
 	}	
 
 	public void getState(String razonSocial) {
-		System.out.println("Model");
+//		System.out.println("Model");
 		statusModel.getState(razonSocial);
 		
 	}

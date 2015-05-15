@@ -1,13 +1,21 @@
 package ungs.crm.entity;
 
+import java.util.Date;
+
+
 public class Conversation {
-	private String tipoContacto,
-				   descripcion,
-				   fecha_Hora;
+
+	private long id;
+
+	private String tipoContacto;
+
+	private String descripcion;
+
+	private Date fecha_Hora;
 	
 	
 	public Conversation(String tipoContacto, String descripcion,
-			String fecha_Hora) {
+			Date fecha_Hora) {
 		this.tipoContacto = tipoContacto;
 		this.descripcion = descripcion;
 		this.fecha_Hora = fecha_Hora;
@@ -17,24 +25,24 @@ public class Conversation {
 		return tipoContacto;
 	}
 
-//	public void setTipoContacto(String tipoContacto) {
-//		this.tipoContacto = tipoContacto;
-//	}
+	protected void setTipoContacto(String tipoContacto) {
+		this.tipoContacto = tipoContacto;
+	}
 
 	public String getDescripcion() {
 		return descripcion;
 	}
 
-//	public void setDescripcion(String descripcion) {
-//		this.descripcion = descripcion;
-//	}
+	protected void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
 
-	public String getFecha_Hora() {
+	public Date getFecha_Hora() {
 		return fecha_Hora;
 	}
 
-//	public void setFecha_Hora(String fecha_Hora) {
-//		this.fecha_Hora = fecha_Hora;
-//	}	
+	protected void setFecha_Hora(Date fecha_Hora) {
+		this.fecha_Hora = fecha_Hora;
+	}	
 	
 }

@@ -1,58 +1,39 @@
 package ungs.crm.viewDesktop;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.util.Observable;
+import java.util.Observer;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 
+import ungs.crm.controller.Controller;
 //import ungs.crm.controller.EstadoControlador;
 //import ungs.crm.entity.Estado;
+import ungs.crm.modelView.StatusModelView;
 
-import javax.swing.JButton;
+public class StateViewDesktop extends JFrame implements Observer {
 
-import ungs.crm.controllerDesktop.InterfaceState;
-import ungs.crm.entity.Customer;
-import ungs.crm.entity.State;
-
-public class StateViewDesktop extends JFrame {
-
-//	private EstadoControlador controlador;
+	private Controller controller;
 	private JPanel contentPane;
 	private JTextField textField, txtRojo;
 	
-	private InterfaceState interfaceState;
+//	private InterfaceState interfaceState;
 
-	/**
-	 * Launch the application.
-	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					EstadoVistaDesktop frame = new EstadoVistaDesktop();
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
 
 	/**
 	 * Create the frame.
 	 */
-	public StateViewDesktop(InterfaceState interfaceState) {
+	public StateViewDesktop(Controller controller) {
+		this.controller = controller;
+		controller.addStatusObserver(this);
+		
 		setTitle("Estados de clientes");
-		this.interfaceState = interfaceState;
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 137);
 		setLocationRelativeTo(null);
@@ -70,11 +51,12 @@ public class StateViewDesktop extends JFrame {
 		textField.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyReleased(KeyEvent arg0) {
-				if(arg0.getKeyCode() == 10)
+				if(arg0.getKeyCode() == 10) {
 					if (textField.getText().isEmpty())
 						JOptionPane.showMessageDialog(null, "Debe ingresar un nombre de cliente!!");
 					else
 						asignData();
+				}
 			}
 		});
 		textField.setBounds(73, 11, 351, 20);
@@ -94,14 +76,35 @@ public class StateViewDesktop extends JFrame {
 		txtRojo.setBounds(73, 64, 77, 20);
 		contentPane.add(txtRojo);
 		txtRojo.setColumns(10);
-				
+
 		setVisible(true);
 	}
 	
 	private void asignData()
 	{
-		State state = interfaceState.getState(new Customer("G001","GOOGLE"));
-		txtRojo.setText(state.getNombre());
+//		State state = interfaceState.getState(new Customer("G001","GOOGLE"));
+//		txtRojo.setText(state.getNombre());
+//		System.out.println("procesando: "+textField.getText());
+		this.controller.getState(textField.getText());
 	}
+	
+	@Override
+	public void update(Observable o, Object arg) {
+		StatusModelView sv = (StatusModelView) arg;
+		if (sv.status==null) {
+			if (sv.razonesSociales.size() == 0 ) {
+				JOptionPane.showInputDialog("No se encontraron coincidencias");
+			} else {
+				String opcion = (String) JOptionPane.showInputDialog(null, "Selecciona una Razon Social", "Razon Social",
+			        JOptionPane.QUESTION_MESSAGE, null, sv.razonesSociales.toArray(),sv.razonesSociales.get(0));
+				textField.setText(opcion);
+				
+			}
+		} else {
+			txtRojo.setText(sv.status);
+			textField.setText(sv.razonesSociales.get(0));
+		}
 
+		
+	}	
 }
