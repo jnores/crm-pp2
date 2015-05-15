@@ -7,6 +7,7 @@ import ungs.crm.dao.StatusDao;
 import ungs.crm.entity.Customer;
 import ungs.crm.entity.State;
 import ungs.crm.model.Model;
+import ungs.crm.viewConsole.StateViewConsole;
 //import java.security.Principal;
 //
 //import ungs.crm.controllerDesktop.ConversationController;
@@ -57,7 +58,7 @@ public class CRMMain {
 		Model model = new Model();
 		
 		Controller controller = new ControllerImpl(model);
-		
+		controller.addStatusObserver(new StateViewConsole());
 		this.principalView = new PrincipalView(controller);
 		
 	}
